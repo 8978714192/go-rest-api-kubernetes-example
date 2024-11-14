@@ -1,0 +1,59 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/8978714192/go-rest-api-kubernetes-example/blob/main/get%20year%20input%20from%20the%20user%20and%20checks%20whether%20it's%20fall%20under%20which%20generations%20as%20mentioned%20below%20%3F%3F%20(if%2C%20elif)\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# @title Default title text\n",
+        "#get year input from the user and checks whether it's fall under which generations as mentioned below ?? (if, elif)\n",
+        "#    GenX      --   1965–1979\n",
+        "#  Millennials -- 1980–1994\n",
+        "#  GenZ        --  1995–2012\n",
+        "# GenAlpha    -- 2013-2025\n",
+        "def determine_generation(year):\n",
+        "    if 1965 <= year <= 1979:\n",
+        "        return \"GenX\"\n",
+        "    elif 1980 <= year <= 1994:\n",
+        "        return \"Millennials\"\n",
+        "    elif 1995 <= year <= 2012:\n",
+        "        return \"GenZ\"\n",
+        "    elif 2013 <= year <= 2025:\n",
+        "        return \"GenAlpha\"\n",
+        "    else:\n",
+        "        return \"Year out of range for defined generations\"\n",
+        "try:\n",
+        "    year = int(input(\"Enter a year: \"))\n",
+        "    generation = determine_generation(year)\n",
+        "    print(f\"The year {year} falls under: {generation}\")\n",
+        "except ValueError:\n",
+        "    print(\"Please enter a valid year.\")"
+      ],
+      "metadata": {
+        "id": "Xb6FLnocs7sy"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
